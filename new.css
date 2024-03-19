@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .inventory-module {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 50px;
+  }
+  
+  .inventory-module h2 {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: inline-block;
+    width: 200px;
+    text-align: right;
+    margin-right: 10px;
+  }
+  
+  .form-group input[type="text"],
+  .form-group input[type="number"] {
+    width: 300px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .form-group input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  .inventory-list {
+    width: 100%;
+    margin-top: 30px;
+  }
+  
+  .inventory-list table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .inventory-list th,
+  .inventory-list td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .inventory-list th {
+    background-color: #f2f2f2;
+  }
+  
+  .inventory-list tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .report-filters {
+    width: 100%;
+    margin-top: 30px;
+  }
+  
+  .report-filters form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .report-filters .form-group {
+    width: 48%;
+  }
+  
+  .report-filters .form-group:first-child {
+    margin-right: 2%;
+  }
+  
+  .reports {
+    width: 100%;
+    margin-top: 30px;
+  }
+  
+  .reports ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .reports li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .reports li:last-child {
+    border-bottom: none;
+  }

@@ -1,0 +1,44 @@
+.delivery-agent-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 50px;
+  }
+  
+  .delivery-agent-app h2 {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+  
+  .delivery-list,
+  .delivery-history {
+    width: 100%;
+    margin-top: 30px;
+  }
+  
+  .delivery-list ul,
+  .delivery-history ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .delivery-list li,
+  .delivery-history li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .delivery-list li:last-child,
+  .delivery-history li:last-child {
+    border-bottom: none;
+  }
+  
+  .delivery-list li button,
+  .delivery-history li button {
+    margin-top: 10px;
+  }

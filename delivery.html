@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="loginApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login to Dlvery</title>
+    <link rel="stylesheet" href="delivery.css">
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="delivery.js"></script>
+<body >
+    <div class="delivery-agent-app">
+        <h2>Delivery Agent</h2>
+        <div class="delivery-list">
+          <h3>Today's Delivery List:</h3>
+          <ul>
+            <li *ngFor="let delivery of deliveryList">
+              <h4>{{delivery.productName}}</h4>
+              <p>Priority: {{delivery.priority}}</p>
+              <p>Address: {{delivery.address}}</p>
+              <p>Status: {{delivery.status}}</p>
+              <button *ngIf="delivery.status !== 'Delivered' && delivery.status !== 'Returned'" (click)="deliver(delivery)">Deliver</button>
+              <button *ngIf="delivery.status === 'Door Lock'" (click)="updateStatus(delivery, 'Missed Delivery')">Update Status</button>
+              <button *ngIf="delivery.status === 'Damaged'" (click)="returnItem(delivery)">Return Item</button>
+            </li>
+          </ul>
+        </div>
+        <div class="delivery-history">
+          <h3>Delivery History:</h3>
+          <ul>
+            <li *ngFor="let delivery of deliveryHistory">
+              <h4>{{delivery.productName}}</h4>
+              <p>Priority: {{delivery.priority}}</p>
+              <p>Address: {{delivery.address}}</p>
+              <p>Status: {{delivery.status}}</p>
+              <p>Customer Name: {{delivery.customerName}}</p>
+              <p>Signature: {{delivery.signature}}</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+</body>
+</html>

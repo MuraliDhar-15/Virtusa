@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="loginApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login to Dlvery</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="login.js"></script>
+<body ng-controller="loginController">
+    <div class="login-container">
+        <h2>Login to Dlvery</h2>
+        <form ng-submit="login()">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" ng-model="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" ng-model="password" required>
+            </div>
+            <div class="form-group">
+                <label for="role">Role:</label>
+                <select id="role" ng-model="role" required>
+                    <option value="InvTeam">Inventory Team</option>
+                    <option value="DLTeam">Delivery Team</option>
+                </select>
+            </div>
+            <button type="submit"><a href="new.html" class="cta-button" >Login</a></button>
+        </form>
+    </div>
+</body>
+</html>

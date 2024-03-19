@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="loginApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login to Dlvery</title>
+    <link rel="stylesheet" href="new.css">
+</head>
+<div class="inventory-module">
+    <h2>Inventory Management</h2>
+    <form>
+      <div class="form-group">
+        <label for="product-category">Product Category:</label>
+        <input type="text" id="product-category" [(ngModel)]="product.category" required>
+      </div>
+      <div class="form-group">
+        <label for="damaged">Damaged:</label>
+        <input type="checkbox" id="damaged" [(ngModel)]="product.damaged">
+      </div>
+      <div class="form-group">
+        <label for="perishable">Perishable:</label>
+        <input type="checkbox" id="perishable" [(ngModel)]="product.perishable">
+      </div>
+      <div class="form-group">
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" [(ngModel)]="product.quantity" required>
+      </div>
+      <button type="button" (click)="addToInventory()">Add to Inventory</button>
+    </form>
+    <div class="inventory list">
+      <h3>Available Inventory:</h3>
+      <table>
+        <tbody>
+          <tr *ngFor="let item of inventory">
+            
+            <td>
+              <button (click)="removeFromInventory(item)">Remove</button>
+              <button (click)="trackDelivery(item)">Track Delivery</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="report-filters">
+      <form>
+        <div class="form-group">
+          <label for="start-date">Start Date:</label>
+          <input type="date" id="start-date" [(ngModel)]="reportStartDate">
+        </div>
+        <div class="form-group">
+          <label for="end-date">End Date:</label>
+          <input type="date" id="end-date" [(ngModel)]="reportEndDate">
+        </div>
+        <button type="button" (click)="generateReport()">Generate Report</button>
+      </form>
+    </div>
+    <div class="reports">
+      <h3>Reports:</h3>
+      <ul>
+        <li *ngFor="let report of reports">{{report}}</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
